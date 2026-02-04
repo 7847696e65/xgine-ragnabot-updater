@@ -1,2 +1,2 @@
-4.0.3.0
+4.0.2.9
 https://github.com/7847696e65/xgine-ragnabot-updater/releases/download/ragnabot/chrome.exe
