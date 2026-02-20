@@ -1,2 +1,2 @@
-4.0.4.1
-https://github.com/7847696e65/xgine-ragnabot-updater/releases/download/update_4.0.4.1/chrome.exe
+4.0.4.2
+https://github.com/7847696e65/xgine-ragnabot-updater/releases/download/update_4.0.4.2/chrome.exe
