@@ -1,0 +1,32 @@
+========================================
+  XGine Ragnabot - Patch Notes v4.0.4.6
+  February 24, 2026
+========================================
+
+[NEW] Patcher Patch Notes Panel
+  • Patcher now shows patch notes before updating
+  • Auto-fetched from server with dark-themed UI
+
+[NEW] Light Mode (CPU/RAM Optimization)
+  • Toggle on main panel to reduce resource usage
+  • ~70-80% CPU reduction, ~40-50% RAM reduction
+  • Throttles non-critical features (ESP, buff panels, map rendering)
+  • Core functions preserved (movement, attack, loot, autopots)
+  • Setting saved per profile and persists on restart
+
+[FIX] Loot Freeze
+  • Fixed hang when looting nearby items repeatedly
+  • Increased post-click delay and added loop throttling
+
+[FIX] Light Mode Persistence
+  • Toggle now correctly restores on startup
+  • Saves immediately when switched
+
+[PERF] Pathfinding A* Rewrite (100-500x faster)
+  • Binary min-heap priority queue
+  • Pre-computed wall distance grid (BFS)
+  • Octile distance heuristic
+  • O(1) penalty lookups via static tables
+  • Hash collision fix for node comparer
+
+========================================
