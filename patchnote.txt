@@ -1,32 +1,51 @@
 ========================================
-  XGine Ragnabot - Patch Notes v4.0.4.6
-  February 24, 2026
+  XGine Ragnabot - Patch Notes v4.0.4.9
+  March 2, 2026
 ========================================
 
-[NEW] Patcher Patch Notes Panel
-  • Patcher now shows patch notes before updating
-  • Auto-fetched from server with dark-themed UI
+[IMPORTANT] HWID Transfer Notice
+  • If you have verified before and have the Discord role,
+    your Discord is linked to your old HWID. Use /change_hwid to update it.
+  • If you have NOT verified your HWID via Discord before,
+    you must contact your reseller or developer to transfer your HWID.
+  • If you cannot update your HWID, stay on v4.0.4.6 which is available at:
+    https://github.com/7847696e65/xgine-ragnabot-updater/releases
 
-[NEW] Light Mode (CPU/RAM Optimization)
-  • Toggle on main panel to reduce resource usage
-  • ~70-80% CPU reduction, ~40-50% RAM reduction
-  • Throttles non-critical features (ESP, buff panels, map rendering)
-  • Core functions preserved (movement, attack, loot, autopots)
-  • Setting saved per profile and persists on restart
+[NEW] Discord Command: /change_hwid
+  • Change your HWID directly via Discord bot
+  • Must be verified first using /verify
+  • 5 HWID changes allowed per month (auto-resets each calendar month)
+  • Tracks usage in database — persists across server restarts
+  • Validates against duplicate HWIDs and same-HWID submissions
 
-[FIX] Loot Freeze
-  • Fixed hang when looting nearby items repeatedly
-  • Increased post-click delay and added loop throttling
+[IMPROVED] Hardware ID System
+  • Enhanced device identification for better account security
+  • Improved compatibility across Windows 7-11 and virtual machines
+  • More stable across Windows updates and hardware changes
+  • Prevents duplicate device IDs on identical hardware
 
-[FIX] Light Mode Persistence
-  • Toggle now correctly restores on startup
-  • Saves immediately when switched
+[FIX] WinAPI Mode Alt-Tab Click Fix
+  • Fixed mouse clicks not registering when game is alt-tabbed
+  • Removed incorrect ScreenToClient conversion that caused negative coordinates
+  • Added bit-masking safety for coordinate packing
 
-[PERF] Pathfinding A* Rewrite (100-500x faster)
-  • Binary min-heap priority queue
-  • Pre-computed wall distance grid (BFS)
-  • Octile distance heuristic
-  • O(1) penalty lookups via static tables
-  • Hash collision fix for node comparer
+[FIX] WinAPI Smartwalk Cursor Not Moving
+  • Fixed cursor position not updating during pathfinding walk
+  • Cursor position is now set before walk trigger (correct order)
+  • Clamped coordinates to valid window range to prevent silent drops
+
+[FIX] Bot Stops When Alt-Tabbed (WinAPI Mode)
+  • Cursor checker no longer blocks the bot loop in WinAPI mode
+  • Physical cursor position is now ignored when using memory-based input
+  • Bot continues walking, attacking, and looting while alt-tabbed
+
+[OPTIMIZE] Pathfinding Performance (Core 2 Duo / VM Support)
+  • Inlined neighbor generation to reduce memory allocations per A* iteration
+  • Added BFS reachability pre-filter — scores all candidates cheaply before running A*
+  • Early termination after finding enough good paths (3-5 instead of exhaustive search)
+  • Single-core VM detection: skips async pre-calc to avoid CPU contention
+  • 2-core VM: forces Fastest mode for background pre-calculation
+  • Removed ~900 lines of dead legacy pathfinding code
+  • Result: Less idle time, lower CPU usage, smoother botting on low-end machines
 
 ========================================

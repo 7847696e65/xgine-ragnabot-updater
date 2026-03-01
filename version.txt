@@ -1,3 +1,3 @@
-4.0.4.6
-https://github.com/7847696e65/xgine-ragnabot-updater/releases/download/update_4.0.4.6/chrome.exe
+4.0.4.9
+https://github.com/7847696e65/xgine-ragnabot-updater/releases/download/update_4.0.4.9/chrome.exe
 https://raw.githubusercontent.com/7847696e65/xgine-ragnabot-updater/refs/heads/main/patchnote.txt
