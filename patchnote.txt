@@ -1,17 +1,17 @@
 ========================================
-  XGine Ragnabot - Patch Notes v4.0.5.1
-  March 14, 2026
+  XGine Ragnabot - Patch Notes v4.0.5.3
+  March 22, 2026
 ========================================
 
-[NEW] Ragnarok Legacy Client Support
-  • Added compatibility for Ragnarok Legacy client
-  • Auto-detection of Legacy client on process attach
-  • Adjusted memory offsets and structures for Legacy client
-  • All core features supported: botting, looting, skills, pathfinding
+[FIX] Bot Stability - Continuous Operation
+  • Fixed an issue where the bot would stop responding after a few minutes
+  • Improved error recovery in the main bot loop
+  • Bot now properly handles temporary data unavailability
+  • Added resilience to entity processing during map transitions
 
-[FIX] General Bug Fixes
-  • Fixed occasional crash when switching between processes
-  • Improved stability during extended bot sessions
-  • Fixed minor UI issues on certain screen resolutions
+[FIX] Entity Processing
+  • Fixed null reference errors in mob and loot processing
+  • Improved safety checks across all entity lookup methods
+  • Bot now gracefully handles edge cases when entity data is loading
 
 ========================================
