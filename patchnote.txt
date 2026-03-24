@@ -1,6 +1,6 @@
 ========================================
-  XGine Ragnabot - Patch Notes v4.0.5.3
-  March 22, 2026
+  XGine Ragnabot - Patch Notes v4.0.5.5
+  March 24, 2026
 ========================================
 
 [FIX] Bot Stability - Continuous Operation
@@ -8,10 +8,29 @@
   • Improved error recovery in the main bot loop
   • Bot now properly handles temporary data unavailability
   • Added resilience to entity processing during map transitions
+  • Added safety limits to prevent freezes during heavy entity load
+  • Improved validation of data read from game process
 
 [FIX] Entity Processing
   • Fixed null reference errors in mob and loot processing
   • Improved safety checks across all entity lookup methods
   • Bot now gracefully handles edge cases when entity data is loading
+
+[FIX] Combat - Attack Consistency
+  • Fixed issue where bot would attack once then idle until mob is manually killed
+  • Bot now properly maintains target lock during combat
+  • Improved attack retry logic when click timing is off
+  • Added chase tolerance so bot continues attacking mobs that move slightly
+
+[FIX] Pathfinding - Walking in Circles
+  • Fixed bot walking in circles to the same destination repeatedly
+  • Improved waypoint detection so bot advances smoothly along path
+  • Fixed path being abandoned too easily in certain modes
+  • Faster stuck detection and recovery
+  • Reverted pathfinding engine to proven stable version
+
+[FIX] Console Log
+  • Fixed duplicate log messages appearing in the console
+  • Improved UI responsiveness during high activity
 
 ========================================
