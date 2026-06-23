@@ -1,9 +1,8 @@
 ========================================
-  XGine Ragnabot - Patch Notes v4.0.6.0
-  June 15, 2026
+  XGine Ragnabot - Patch Notes v4.0.6.1
+  June 23, 2026
 ========================================
 
 [FIX] Bot Stability - Continuous Operation
-  • Update for new backend
-  • Update for new upcoming updates.
+  • Update for new ragexe
 ========================================
